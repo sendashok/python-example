@@ -1,1 +1,21 @@
+name: Copy Code to Azure Storage
 
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  copy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Copy code to Azure Storage
+        uses: azure/CLI@v1
+        with:
+          azcliversion: 2.33.0
+          inlineScript: |
+            az storage blob upload-batch --destination <storage-container> --source . --account-name <storage-account-name> --account-key <storage-account-key>
