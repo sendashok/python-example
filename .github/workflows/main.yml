@@ -1,0 +1,15 @@
+name: Copy Code to Azure Storage
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  copy:
+    runs-on: ubuntu-latest
+
+    steps:
+      name: Checkout and push into the storage.
+      run: echo "Hello World"
+      
