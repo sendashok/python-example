@@ -6,4 +6,6 @@ jobs:
     steps:
       - name: Checkout and push into the storage.
         uses: actions/checkout@v2
+      - name: Copy code to Azure Storage
+        uses: azure/CLI@v1
         
