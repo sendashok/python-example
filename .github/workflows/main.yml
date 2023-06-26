@@ -5,5 +5,5 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout and push into the storage.
-        uses: actions/checkout@v2
+        run: echo "Hello World"
         
