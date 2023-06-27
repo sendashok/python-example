@@ -15,4 +15,4 @@ jobs:
         
     - name: Upload files to Azure Storage Account
       run: |
-        az storage blob upload-batch --account-name storageaccgithub --destination repo --source --overwrite.
+        az storage blob upload-batch --account-name storageaccgithub --destination repo --source . --overwrite
