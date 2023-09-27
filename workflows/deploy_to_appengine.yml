@@ -1,11 +1,7 @@
 name: Deploy to GCP App Engine
-
 on: push
-	branches:
-		- master
-      
 jobs:
-	deploy:
+	my-jobs:
 		runs-on: ubuntu-latest
 
 		steps:
